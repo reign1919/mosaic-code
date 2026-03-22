@@ -1,0 +1,55 @@
+.involved-hero { position: relative; overflow: hidden; }
+.inv-hero-tiles { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.inv-tile { position: absolute; border-radius: 3px; background: var(--col); opacity: 0.07; animation: invFloat var(--dur) ease-in-out infinite; animation-delay: var(--d); }
+[data-theme="dark"] .inv-tile { opacity: 0.13; }
+@keyframes invFloat { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-18px) rotate(10deg)} }
+
+.ways-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; margin-top: 36px; }
+.way-card { background: var(--surface); border: 1px solid var(--border); border-top: 3px solid var(--wcol); border-radius: var(--r); padding: 28px 22px; display: flex; flex-direction: column; gap: 8px; transform-style: preserve-3d; transition: box-shadow 0.2s ease; }
+.way-card:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.09); }
+.way-icon { width: 48px; height: 48px; border-radius: 11px; background: color-mix(in srgb, var(--wcol) 13%, var(--surface2)); color: var(--wcol); display: flex; align-items: center; justify-content: center; }
+.way-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text3); }
+.way-card h3 { font-size: 21px; }
+.way-card p  { font-size: 13.5px; color: var(--text2); line-height: 1.75; flex: 1; }
+.way-btn { margin-top: 6px; font-size: 12px; padding: 9px 16px; }
+.way-btn:hover { border-color: var(--wcol); color: var(--wcol); }
+
+.donate-band { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 80px 0; }
+.donate-inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 64px; align-items: start; }
+.donate-text h2 { font-size: clamp(26px,3.5vw,42px); margin-bottom: 12px; }
+.donate-text p  { color: var(--text2); font-size: 15px; line-height: 1.75; }
+.donate-tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.donate-tier {
+  background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--r);
+  padding: 22px 18px; text-align: left; display: flex; flex-direction: column; gap: 4px;
+  position: relative; overflow: hidden;
+  transition: all var(--transition);
+}
+.donate-tier:hover { border-color: var(--tcol); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.07); }
+.donate-tier:hover .tier-bar { width: 100%; }
+.tier-bar { position: absolute; bottom: 0; left: 0; height: 3px; background: var(--tcol); width: 0; transition: width 0.3s ease; }
+.tier-amt  { font-family: 'Playfair Display',serif; font-size: 26px; font-weight: 800; color: var(--tcol); }
+.tier-label { font-size: 10px; font-family: 'Space Mono',monospace; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text2); }
+.tier-desc  { font-size: 12px; color: var(--text3); margin-top: 4px; line-height: 1.5; }
+
+.faq-section { background: var(--surface); }
+.faq-list { max-width: 700px; margin: 40px auto 0; display: flex; flex-direction: column; gap: 3px; }
+.faq-item { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: var(--bg2); }
+.faq-item summary { padding: 18px 22px; font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-size: 14.5px; transition: color var(--transition); }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-chevron { color: var(--text3); flex-shrink: 0; transition: transform var(--transition); }
+.faq-item[open] summary { color: var(--accent); }
+.faq-item[open] .faq-chevron { transform: rotate(180deg); color: var(--accent); }
+.faq-item p { padding: 0 22px 18px; font-size: 14px; color: var(--text2); line-height: 1.75; }
+
+@media (max-width: 900px) {
+  .ways-grid { grid-template-columns: 1fr 1fr; }
+  .donate-inner { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 560px) {
+  .ways-grid { grid-template-columns: 1fr; }
+  .donate-tiers { grid-template-columns: 1fr; }
+}
+[data-theme="dark"] .way-card { background: linear-gradient(160deg, var(--surface) 0%, var(--surface2) 100%); }
+[data-theme="dark"] .donate-tier { background: linear-gradient(160deg, var(--surface) 0%, var(--surface2) 100%); }
+[data-theme="dark"] .donate-band { background: radial-gradient(ellipse at 50% 50%, rgba(230,57,70,0.05) 0%, transparent 60%), var(--bg2); }

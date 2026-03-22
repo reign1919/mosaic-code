@@ -1,0 +1,86 @@
+@media (pointer: fine) { * { cursor: none !important; } }
+
+/* ── Main cursor ── */
+.custom-cursor {
+  position: fixed; top: 0; left: 0;
+  pointer-events: none; z-index: 99999;
+  will-change: transform;
+}
+.cursor-ring {
+  width: 38px; height: 38px;
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+  position: absolute; top: -19px; left: -19px;
+  transition: width 0.25s ease, height 0.25s ease, top 0.25s ease, left 0.25s ease,
+              border-color 0.2s ease, border-radius 0.25s ease, transform 0.15s ease;
+  opacity: 0.75;
+  box-shadow: 0 0 10px rgba(230,57,70,0.2);
+}
+.cursor-dot {
+  width: 5px; height: 5px;
+  background: var(--accent);
+  border-radius: 50%;
+  position: absolute; top: -2.5px; left: -2.5px;
+  transition: transform 0.1s ease, background 0.2s ease;
+  box-shadow: 0 0 6px var(--accent);
+}
+
+/* Hover state — diamond + teal */
+.custom-cursor.on-link .cursor-ring {
+  width: 48px; height: 48px;
+  top: -24px; left: -24px;
+  border-color: var(--c3);
+  border-radius: 6px;
+  transform: rotate(45deg);
+  opacity: 1;
+  box-shadow: 0 0 16px rgba(42,157,143,0.4);
+}
+.custom-cursor.on-link .cursor-dot {
+  background: var(--c3);
+  transform: scale(1.5);
+}
+
+/* Press state — shrink ring */
+.custom-cursor.pressed .cursor-ring {
+  width: 20px; height: 20px;
+  top: -10px; left: -10px;
+  border-color: var(--c2);
+  box-shadow: 0 0 20px rgba(244,162,97,0.5);
+}
+.custom-cursor.pressed .cursor-dot {
+  transform: scale(2);
+  background: var(--c2);
+}
+
+/* ── Trail container ── */
+.cursor-trail-container {
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 99998;
+  overflow: hidden;
+}
+
+/* ── Trail tiles ── */
+.cursor-tile {
+  position: fixed; top: -7px; left: -7px;
+  width: 14px; height: 14px;
+  border-radius: 3px;
+  background: var(--col);
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* ── Sparkle burst ── */
+.cursor-spark {
+  position: fixed;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--col);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: sparkFly 0.55s cubic-bezier(0.4,0,0.2,1) forwards;
+  box-shadow: 0 0 8px var(--col);
+}
+@keyframes sparkFly {
+  0%   { opacity: 1; transform: translate(-50%,-50%) translate(0,0) scale(1.2); }
+  100% { opacity: 0; transform: translate(-50%,-50%) translate(var(--tx),var(--ty)) scale(0); }
+}
