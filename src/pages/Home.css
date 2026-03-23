@@ -39,9 +39,9 @@
 }
 
 .hero-title {
-  font-family: 'Titan One', cursive;
+  font-family: 'Outfit', sans-serif;
   font-size: clamp(40px,5.5vw,72px);
-  font-weight: 400;
+  font-weight: 800;
   line-height: 1.05;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -134,7 +134,8 @@
 .stat:hover { transform: rotate(0deg) scale(1.08) !important; }
 .stat-n {
   display: block;
-  font-family: 'Titan One', cursive;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
   font-size: 36px;
 }
 .stat-label {
@@ -149,7 +150,8 @@
 /* ── CAUSES ─────────────────────────────────── */
 .causes-section { background: var(--bg2); }
 .section-title {
-  font-family: 'Titan One', cursive;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
   font-size: clamp(30px,4vw,52px);
   margin-bottom: 48px;
   line-height: 1.1;
@@ -186,7 +188,8 @@
   box-shadow: 2px 2px 0px var(--ccol);
 }
 .cause-card h3 {
-  font-family: 'Titan One', cursive;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
   font-size: 16px;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -213,7 +216,8 @@
 @keyframes qbPulse { 0%,100%{opacity:0.06} 50%{opacity:0.14} }
 .qb-inner { position: relative; z-index: 1; }
 .qb-mark {
-  font-family: 'Titan One', cursive;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
   font-size: 140px;
   line-height: 0.5;
   color: rgba(255,255,255,0.08);
@@ -262,7 +266,8 @@
   width: 40px; height: 40px;
   border-radius: 8px;
   display:flex; align-items:center; justify-content:center;
-  font-family:'Titan One',cursive;
+  font-family:'Outfit',sans-serif;
+  font-weight: 800;
   font-size:18px;
   color:#fff;
   flex-shrink:0;
@@ -294,7 +299,8 @@
 @keyframes ctaTile { 0%,100%{opacity:0.07} 50%{opacity:0.15} }
 .cta-content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
 .cta-content h2 {
-  font-family: 'Titan One', cursive;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
   font-size: clamp(28px,3.5vw,50px);
   color: #fff;
   line-height: 1.1;

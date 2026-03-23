@@ -113,7 +113,7 @@ export default function MosaicIntro({ onDone }) {
           ctx.textBaseline = "middle";
 
           // Hard shadow (brutalist)
-          ctx.font = `${Math.min(72, W * 0.08)}px 'Titan One', cursive`;
+          ctx.font = `800 ${Math.min(72, W * 0.08)}px 'Outfit', sans-serif`;
           ctx.fillStyle = "rgba(0,0,0,0.4)";
           ctx.fillText("THE MOSAIC", W / 2 + 4, H / 2 - 20 + 4);
           ctx.fillStyle = "#ffffff";
@@ -146,7 +146,7 @@ export default function MosaicIntro({ onDone }) {
         });
         ctx.save();
         ctx.textAlign = "center"; ctx.textBaseline = "middle";
-        ctx.font = `${Math.min(72, W * 0.08)}px 'Titan One', cursive`;
+        ctx.font = `800 ${Math.min(72, W * 0.08)}px 'Outfit', sans-serif`;
         ctx.fillStyle = "rgba(0,0,0,0.4)";
         ctx.fillText("THE MOSAIC", W / 2 + 4, H / 2 - 20 + 4);
         ctx.fillStyle = "#ffffff";

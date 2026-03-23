@@ -34,7 +34,7 @@
   margin-bottom: 56px;
   position: relative;
 }
-.footer-brand h3 { font-family: 'Titan One', cursive; font-size: 22px; margin: 14px 0 10px; text-transform: uppercase; }
+.footer-brand h3 { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 22px; margin: 14px 0 10px; text-transform: uppercase; }
 .footer-brand p  { font-family: 'Kalam', cursive; color: var(--text2); font-size: 15px; line-height: 1.7; max-width: 270px; margin-bottom: 22px; font-weight: 700; }
 
 /* Footer logo tiles 3×3 */
@@ -62,7 +62,7 @@
 }
 .footer-socials a:hover { background: var(--accent); color:#fff; border-color:var(--c7); transform:translateY(-3px) rotate(-5deg); box-shadow: var(--shadow-brutal); }
 
-.footer-col h4 { font-family:'Titan One',cursive; font-size:14px; margin-bottom:18px; color:var(--text); text-transform: uppercase; letter-spacing: 0.04em; }
+.footer-col h4 { font-family:'Outfit',sans-serif; font-weight:800; font-size:14px; margin-bottom:18px; color:var(--text); text-transform: uppercase; letter-spacing: 0.04em; }
 .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:9px; }
 .footer-col li button, .footer-col li span {
   font-family: 'Epilogue', sans-serif;
