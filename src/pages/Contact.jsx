@@ -48,7 +48,7 @@ export default function Contact() {
               <div className="success-state">
                 <div className="success-tiles">
                   {[...Array(9)].map((_,i) => (
-                    <span key={i} style={{ background: ["#e63946","#f4a261","#2a9d8f","#457b9d","#e9c46a","#6a4c93","#70c1b3","#d4a5a5","#1d3557"][i], borderRadius:4, animation:`successTile 0.6s ease forwards`, animationDelay:`${i*0.05}s`, opacity:0 }}/>
+                    <span key={i} style={{ background: ["#ff2d7b","#ff6b35","#b8ff00","#00d4ff","#ffe14d","#6c2bd9","#7bffb2","#ff9ee7","#1a0536"][i], borderRadius:4, animation:`successTile 0.6s ease forwards`, animationDelay:`${i*0.05}s`, opacity:0 }}/>
                   ))}
                 </div>
                 <CheckCircle size={48} color="var(--c3)" />
@@ -93,9 +93,9 @@ export default function Contact() {
             <div className="contact-info-card">
               <h3>Ways to reach us</h3>
               {[
-                { icon: <Mail size={15} color="#e63946"/>, label:"Email",   val:"hello@mosaicfoundation.org" },
-                { icon: <Phone size={15} color="#2a9d8f"/>, label:"Phone",  val:"+91 XXXXX XXXXX" },
-                { icon: <MapPin size={15} color="#e9c46a"/>,label:"Based in",val:"India (nationwide)" },
+                { icon: <Mail size={15} color="#ff2d7b"/>, label:"Email",   val:"hello@mosaicfoundation.org" },
+                { icon: <Phone size={15} color="#b8ff00"/>, label:"Phone",  val:"+91 XXXXX XXXXX" },
+                { icon: <MapPin size={15} color="#ffe14d"/>,label:"Based in",val:"India (nationwide)" },
               ].map(d => (
                 <div key={d.label} className="contact-detail">
                   <div className="cd-icon">{d.icon}</div>
@@ -107,10 +107,10 @@ export default function Contact() {
             <div className="contact-info-card">
               <h4>Response times</h4>
               {[
-                { label:"General inquiries",    time:"2–3 days", col:"#2a9d8f" },
-                { label:"Partnership requests", time:"3–5 days", col:"#e9c46a" },
-                { label:"Program applications", time:"1 week",   col:"#f4a261" },
-                { label:"Donation queries",     time:"24–48 hrs",col:"#70c1b3" },
+                { label:"General inquiries",    time:"2–3 days", col:"#b8ff00" },
+                { label:"Partnership requests", time:"3–5 days", col:"#ffe14d" },
+                { label:"Program applications", time:"1 week",   col:"#ff6b35" },
+                { label:"Donation queries",     time:"24–48 hrs",col:"#7bffb2" },
               ].map(r => (
                 <div key={r.label} className="response-row">
                   <span>{r.label}</span>

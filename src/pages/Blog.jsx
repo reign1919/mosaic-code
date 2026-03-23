@@ -5,12 +5,12 @@ import "./PageShared.css";
 import "./Blog.css";
 
 const POSTS = [
-  { title: "Why Teen-Led Nonprofits Are Different (And Why That Matters)", author: "Ananya Rao",  date: "Mar 12, 2025", readTime: "5 min", tag: "Leadership",    color: "#e63946", excerpt: "When adults run youth programs, they often build for teens rather than with them. Here's what changes when the power dynamic flips.", featured: true },
-  { title: "The Wall Project: What Happened When We Asked a Neighbourhood to Paint Its Own Story", author: "Rohan Mehta", date: "Feb 28, 2025", readTime: "8 min", tag: "Community Arts", color: "#f4a261", excerpt: "Three cities. Fourteen walls. Thousands of stories. The messy, beautiful reality of community-driven public art.", featured: false },
-  { title: "Mental Health in Schools: What Students Wish Teachers Knew", author: "Simran Gill", date: "Feb 10, 2025", readTime: "6 min", tag: "Wellness",     color: "#6a4c93", excerpt: "We asked 200 students what they needed most from their schools. The answers were honest, heartbreaking, and fixable.", featured: false },
-  { title: "How We Raised ₹4.2 Lakhs With Zero Paid Marketing", author: "Dev Sharma",  date: "Jan 22, 2025", readTime: "4 min", tag: "Fundraising",  color: "#2a9d8f", excerpt: "A scrappy guide to community fundraising from a 16-year-old who had no idea what he was doing at the start.", featured: false },
-  { title: "Environmental Data Doesn't Have to Be Boring: A Case Study", author: "Priya Nair",  date: "Jan 8, 2025",  readTime: "7 min", tag: "Environment",  color: "#70c1b3", excerpt: "We turned three months of waste audit data into a public art installation. Here's the why and the how.", featured: false },
-  { title: "What Running a Nonprofit Taught Me About Failure", author: "Arjun Kapoor", date: "Dec 15, 2024", readTime: "5 min", tag: "Reflection",   color: "#e9c46a", excerpt: "The program that flopped. The event nobody came to. The grant we didn't get. And why all of it made us better.", featured: false },
+  { title: "Why Teen-Led Nonprofits Are Different (And Why That Matters)", author: "Ananya Rao",  date: "Mar 12, 2025", readTime: "5 min", tag: "Leadership",    color: "#ff2d7b", excerpt: "When adults run youth programs, they often build for teens rather than with them. Here's what changes when the power dynamic flips.", featured: true },
+  { title: "The Wall Project: What Happened When We Asked a Neighbourhood to Paint Its Own Story", author: "Rohan Mehta", date: "Feb 28, 2025", readTime: "8 min", tag: "Community Arts", color: "#ff6b35", excerpt: "Three cities. Fourteen walls. Thousands of stories. The messy, beautiful reality of community-driven public art.", featured: false },
+  { title: "Mental Health in Schools: What Students Wish Teachers Knew", author: "Simran Gill", date: "Feb 10, 2025", readTime: "6 min", tag: "Wellness",     color: "#6c2bd9", excerpt: "We asked 200 students what they needed most from their schools. The answers were honest, heartbreaking, and fixable.", featured: false },
+  { title: "How We Raised ₹4.2 Lakhs With Zero Paid Marketing", author: "Dev Sharma",  date: "Jan 22, 2025", readTime: "4 min", tag: "Fundraising",  color: "#b8ff00", excerpt: "A scrappy guide to community fundraising from a 16-year-old who had no idea what he was doing at the start.", featured: false },
+  { title: "Environmental Data Doesn't Have to Be Boring: A Case Study", author: "Priya Nair",  date: "Jan 8, 2025",  readTime: "7 min", tag: "Environment",  color: "#7bffb2", excerpt: "We turned three months of waste audit data into a public art installation. Here's the why and the how.", featured: false },
+  { title: "What Running a Nonprofit Taught Me About Failure", author: "Arjun Kapoor", date: "Dec 15, 2024", readTime: "5 min", tag: "Reflection",   color: "#ffe14d", excerpt: "The program that flopped. The event nobody came to. The grant we didn't get. And why all of it made us better.", featured: false },
 ];
 
 function BlogCard({ p, i }) {
@@ -85,7 +85,7 @@ export default function Blog({ onNav }) {
                   <div className="bf-tiles">
                     {[...Array(9)].map((_,i) => (
                       <span key={i} style={{
-                        background: ["#e63946","#f4a261","#2a9d8f","#457b9d","#e9c46a","#6a4c93","#70c1b3","#d4a5a5","#1d3557"][i],
+                        background: ["#ff2d7b","#ff6b35","#b8ff00","#00d4ff","#ffe14d","#6c2bd9","#7bffb2","#ff9ee7","#1a0536"][i],
                         borderRadius: 4, animation: `bfTile 3s ease-in-out infinite`, animationDelay: `${i*0.2}s`
                       }}/>
                     ))}

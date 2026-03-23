@@ -1,0 +1,78 @@
+/* ═══ MARQUEE ════════════════════════════════════ */
+.marquee-track {
+  overflow: hidden;
+  border-top: 3px solid var(--c5);
+  border-bottom: 3px solid var(--c6);
+  padding: 0;
+  position: relative;
+  background: linear-gradient(90deg, rgba(255,235,59,0.05) 0%, rgba(0,255,136,0.05) 100%);
+  box-shadow: inset 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.marquee-inner {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll var(--speed, 35s) linear infinite;
+  padding: 18px 0;
+  gap: 0;
+}
+.marquee-track.reverse .marquee-inner {
+  animation-direction: reverse;
+}
+
+.marquee-item {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  background: linear-gradient(120deg, var(--c5) 0%, var(--c6) 50%, var(--c3) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
+  padding: 0 24px;
+  transition: all 0.3s ease;
+  transform: scaleY(1);
+  display: flex;
+  align-items: center;
+}
+.marquee-item:hover {
+  transform: scaleY(1.15) skewX(-5deg);
+  filter: drop-shadow(0 4px 12px rgba(255,235,59,0.3));
+}
+.marquee-sep {
+  font-size: 18px;
+  color: var(--c5);
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  font-weight: 800;
+  animation: spin 3s linear infinite;
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+@keyframes marqueeScroll {
+  0%   { transform: translateX(0) }
+  100% { transform: translateX(-50%) }
+}
+
+/* Dark variant */
+.marquee-track.dark-variant {
+  background: var(--ink);
+  border-color: rgba(255,255,255,0.08);
+}
+[data-theme="dark"] .marquee-track.dark-variant { background: #050508 }
+.marquee-track.dark-variant .marquee-item {
+  color: rgba(255,255,255,0.5);
+}
+.marquee-track.dark-variant .marquee-item:hover {
+  color: #fff;
+}
+.marquee-track.dark-variant .marquee-sep {
+  color: var(--accent, var(--coral));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-inner { animation: none }
+}

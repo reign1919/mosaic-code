@@ -35,7 +35,7 @@ export default function Navbar({ active, onNav, theme, toggleTheme }) {
             </span>
             <span>
               <span className="logo-name">The Mosaic</span>
-              <span className="logo-sub">Foundation</span>
+              <span className="logo-sub">foundation ✦</span>
             </span>
           </button>
 

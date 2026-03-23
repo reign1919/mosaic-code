@@ -5,12 +5,12 @@ import "./PageShared.css";
 import "./Work.css";
 
 const PROJECTS = [
-  { title: "The Wall Project",          year: "2024", color: "#e63946", tag: "Community Arts",  desc: "We commissioned 14 murals across 6 cities, each one depicting a local story told by the community itself. Over 3,000 people participated in the ideation process.", impact: "3,000+ participants · 6 cities",  featured: true },
-  { title: "Voices Unfiltered",         year: "2024", color: "#2a9d8f", tag: "Youth Media",     desc: "A podcast series where teenagers interview decision-makers — from mayors to principals — asking the questions adults often won't.", impact: "28 episodes · 12K listeners",     featured: false },
-  { title: "Green Tile Initiative",     year: "2023", color: "#70c1b3", tag: "Environment",     desc: "Teen-led tree planting and waste audit campaigns across three schools, turning environmental data into visual art installations.", impact: "400 trees · 3 schools",          featured: false },
-  { title: "Digital Bridge",            year: "2023", color: "#457b9d", tag: "Education",       desc: "Refurbished and donated 120 laptops to underserved students, paired with a peer-tutoring program run entirely by high schoolers.", impact: "120 laptops · 200 students",     featured: false },
-  { title: "Mosaic Mental Health Week", year: "2024", color: "#6a4c93", tag: "Wellness",        desc: "An annual awareness campaign combining visual art, open mic nights, and school counsellor partnerships to normalise mental health conversations.", impact: "1,200 attendees · 9 schools",   featured: false },
-  { title: "The Scholarship Tile",      year: "2024", color: "#e9c46a", tag: "Education",       desc: "A merit-plus-need scholarship fund for students from low-income families to access arts, coding, and leadership programs.", impact: "₹4.2L raised · 18 recipients",  featured: false },
+  { title: "The Wall Project",          year: "2024", color: "#ff2d7b", tag: "Community Arts",  desc: "We commissioned 14 murals across 6 cities, each one depicting a local story told by the community itself. Over 3,000 people participated in the ideation process.", impact: "3,000+ participants · 6 cities",  featured: true },
+  { title: "Voices Unfiltered",         year: "2024", color: "#b8ff00", tag: "Youth Media",     desc: "A podcast series where teenagers interview decision-makers — from mayors to principals — asking the questions adults often won't.", impact: "28 episodes · 12K listeners",     featured: false },
+  { title: "Green Tile Initiative",     year: "2023", color: "#7bffb2", tag: "Environment",     desc: "Teen-led tree planting and waste audit campaigns across three schools, turning environmental data into visual art installations.", impact: "400 trees · 3 schools",          featured: false },
+  { title: "Digital Bridge",            year: "2023", color: "#00d4ff", tag: "Education",       desc: "Refurbished and donated 120 laptops to underserved students, paired with a peer-tutoring program run entirely by high schoolers.", impact: "120 laptops · 200 students",     featured: false },
+  { title: "Mosaic Mental Health Week", year: "2024", color: "#6c2bd9", tag: "Wellness",        desc: "An annual awareness campaign combining visual art, open mic nights, and school counsellor partnerships to normalise mental health conversations.", impact: "1,200 attendees · 9 schools",   featured: false },
+  { title: "The Scholarship Tile",      year: "2024", color: "#ffe14d", tag: "Education",       desc: "A merit-plus-need scholarship fund for students from low-income families to access arts, coding, and leadership programs.", impact: "₹4.2L raised · 18 recipients",  featured: false },
 ];
 
 function WorkCard({ p, i }) {

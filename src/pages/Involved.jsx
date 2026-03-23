@@ -5,17 +5,17 @@ import "./PageShared.css";
 import "./Involved.css";
 
 const WAYS = [
-  { icon: <Heart size={24}/>,     color: "#e63946", title: "Donate",   sub: "Fund the work",   desc: "Every rupee goes directly to programs. No bloated admin costs — we're teens working on borrowed time and genuine passion." },
-  { icon: <Handshake size={24}/>, color: "#2a9d8f", title: "Volunteer",sub: "Give your time",  desc: "From event photography to graphic design, spreadsheet management to mentorship — we need people with skills and heart." },
-  { icon: <Briefcase size={24}/>, color: "#457b9d", title: "Partner",  sub: "Work with us",    desc: "Schools, businesses, NGOs, and government bodies — if your mission overlaps with ours, let's build something together." },
-  { icon: <PenLine size={24}/>,   color: "#e9c46a", title: "Intern",   sub: "Learn by doing",  desc: "We offer structured internships for students who want real nonprofit experience. Real projects. Real responsibilities. No coffee runs." },
+  { icon: <Heart size={24}/>,     color: "#ff2d7b", title: "Donate",   sub: "Fund the work",   desc: "Every rupee goes directly to programs. No bloated admin costs — we're teens working on borrowed time and genuine passion." },
+  { icon: <Handshake size={24}/>, color: "#b8ff00", title: "Volunteer",sub: "Give your time",  desc: "From event photography to graphic design, spreadsheet management to mentorship — we need people with skills and heart." },
+  { icon: <Briefcase size={24}/>, color: "#00d4ff", title: "Partner",  sub: "Work with us",    desc: "Schools, businesses, NGOs, and government bodies — if your mission overlaps with ours, let's build something together." },
+  { icon: <PenLine size={24}/>,   color: "#ffe14d", title: "Intern",   sub: "Learn by doing",  desc: "We offer structured internships for students who want real nonprofit experience. Real projects. Real responsibilities. No coffee runs." },
 ];
 
 const TIERS = [
-  { amt: "₹199", label: "Supporter", desc: "Workshop materials for one student", col: "#e63946" },
-  { amt: "₹499", label: "Advocate",  desc: "One community art supply kit",       col: "#2a9d8f" },
-  { amt: "₹999", label: "Champion",  desc: "Funds a full community event",        col: "#6a4c93" },
-  { amt: "Custom",label: "Patron",   desc: "Name your own contribution",          col: "#e9c46a" },
+  { amt: "₹199", label: "Supporter", desc: "Workshop materials for one student", col: "#ff2d7b" },
+  { amt: "₹499", label: "Advocate",  desc: "One community art supply kit",       col: "#b8ff00" },
+  { amt: "₹999", label: "Champion",  desc: "Funds a full community event",        col: "#6c2bd9" },
+  { amt: "Custom",label: "Patron",   desc: "Name your own contribution",          col: "#ffe14d" },
 ];
 
 const FAQ = [
