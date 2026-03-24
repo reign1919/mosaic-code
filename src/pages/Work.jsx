@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { ArrowRight, TrendingUp } from "lucide-react";
 import { useStaggerReveal, useScrollReveal } from "../hooks/useScrollReveal";
+import Scroll3DWrapper from "../components/Scroll3DWrapper";
 import "./PageShared.css";
 import "./Work.css";
 
@@ -76,7 +77,11 @@ export default function Work({ onNav }) {
       <section className="section">
         <div className="container">
           <div className="work-grid" ref={grid1}>
-            {PROJECTS.map((p, i) => <WorkCard key={p.title} p={p} i={i} />)}
+            {PROJECTS.map((p, i) => (
+              <Scroll3DWrapper key={p.title} intensity={0.5} direction="up">
+                <WorkCard p={p} i={i} />
+              </Scroll3DWrapper>
+            ))}
           </div>
         </div>
       </section>
@@ -84,16 +89,18 @@ export default function Work({ onNav }) {
       {/* CTA */}
       <section className="work-cta" ref={ctaRef}>
         <div className="container">
-          <div className="work-cta-inner reveal-block">
-            <div>
-              <span className="tag-glow">Get Involved</span>
-              <h2>Have a project idea?</h2>
-              <p>We're always looking to expand. Pitch us a community project — if it fits our values, we'll build it together.</p>
+          <Scroll3DWrapper intensity={0.3} direction="down">
+            <div className="work-cta-inner reveal-block">
+              <div>
+                <span className="tag-glow">Get Involved</span>
+                <h2>Have a project idea?</h2>
+                <p>We're always looking to expand. Pitch us a community project — if it fits our values, we'll build it together.</p>
+              </div>
+              <button className="btn btn-primary" onClick={() => onNav("contact")}>
+                Pitch a Project <ArrowRight size={16}/>
+              </button>
             </div>
-            <button className="btn btn-primary" onClick={() => onNav("contact")}>
-              Pitch a Project <ArrowRight size={16}/>
-            </button>
-          </div>
+          </Scroll3DWrapper>
         </div>
       </section>
     </div>

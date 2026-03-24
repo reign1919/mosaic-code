@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { Mic, Palette, Leaf, Monitor, Brain, GraduationCap, ArrowRight } from "lucide-react";
 import { useScrollReveal, useStaggerReveal } from "../hooks/useScrollReveal";
+import Scroll3DWrapper from "../components/Scroll3DWrapper";
 import "./PageShared.css";
 import "./Programs.css";
 
@@ -92,7 +93,11 @@ export default function Programs({ onNav }) {
       <section className="section">
         <div className="container">
           <div className="programs-grid">
-            {PROGRAMS.map((p, i) => <ProgramCard key={p.name} p={p} i={i} />)}
+            {PROGRAMS.map((p, i) => (
+              <Scroll3DWrapper key={p.name} intensity={0.5} direction={i % 2 === 0 ? "left" : "right"}>
+                <ProgramCard p={p} i={i} />
+              </Scroll3DWrapper>
+            ))}
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { Users, Zap, Award, BookOpen, ArrowRight } from "lucide-react";
 import MosaicCanvas from "../components/MosaicCanvas";
 import { useScrollReveal, useStaggerReveal } from "../hooks/useScrollReveal";
+import Scroll3DWrapper from "../components/Scroll3DWrapper";
 import "./PageShared.css";
 import "./About.css";
 
@@ -152,14 +153,16 @@ export default function About({ onNav }) {
           <h2 className="section-title-centered">Our journey</h2>
           <div className="timeline" ref={timelineRef}>
             {TIMELINE.map((t, i) => (
-              <div key={i} className="tl-item reveal-child">
-                <div className="tl-dot" style={{ "--col": `var(--c${(i%5)+1})` }} />
-                <div className="tl-year">{t.year}</div>
-                <div className="tl-body">
-                  <h4>{t.title}</h4>
-                  <p className="handwritten">{t.desc}</p>
+              <Scroll3DWrapper key={i} intensity={0.6} direction={i % 2 === 0 ? "left" : "right"}>
+                <div className="tl-item reveal-child">
+                  <div className="tl-dot" style={{ "--col": `var(--c${(i%5)+1})` }} />
+                  <div className="tl-year">{t.year}</div>
+                  <div className="tl-body">
+                    <h4>{t.title}</h4>
+                    <p className="handwritten">{t.desc}</p>
+                  </div>
                 </div>
-              </div>
+              </Scroll3DWrapper>
             ))}
           </div>
         </div>
@@ -171,7 +174,11 @@ export default function About({ onNav }) {
           <span className="tag-glow">What We Stand For</span>
           <h2 className="section-title-centered">Our Values</h2>
           <div className="values-grid" ref={valuesReveal}>
-            {VALUES.map((v, i) => <ValueCard key={v.title} v={v} i={i} />)}
+            {VALUES.map((v, i) => (
+              <Scroll3DWrapper key={v.title} intensity={0.5} direction="up">
+                <ValueCard v={v} i={i} />
+              </Scroll3DWrapper>
+            ))}
           </div>
         </div>
       </section>
@@ -183,7 +190,11 @@ export default function About({ onNav }) {
           <h2 className="section-title-centered">Meet the team</h2>
           <p className="section-sub">All of us are between 15 and 18. All of us are serious about changing the world.</p>
           <div className="team-grid" ref={teamReveal}>
-            {TEAM.map((m, i) => <TeamCard key={m.name} m={m} i={i} />)}
+            {TEAM.map((m, i) => (
+              <Scroll3DWrapper key={m.name} intensity={0.5} direction={i % 2 === 0 ? "up" : "down"}>
+                <TeamCard m={m} i={i} />
+              </Scroll3DWrapper>
+            ))}
           </div>
         </div>
       </section>

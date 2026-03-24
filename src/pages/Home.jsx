@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { ArrowRight, Sparkles, Users, Globe, Heart } from "lucide-react";
 import MosaicCanvas from "../components/MosaicCanvas";
 import { useScrollReveal, useStaggerReveal } from "../hooks/useScrollReveal";
+import Scroll3DWrapper from "../components/Scroll3DWrapper";
 import "./Home.css";
 
 const STATS = [
@@ -141,7 +142,11 @@ export default function Home({ onNav }) {
           <span className="tag-glow">What We Do</span>
           <h2 className="section-title">Four pillars.<br /><span className="handwritten" style={{ color: "var(--accent)" }}>One foundation.</span></h2>
           <div className="causes-grid" ref={causesRef}>
-            {CAUSES.map((c, i) => <CauseCard key={c.title} c={c} i={i} />)}
+            {CAUSES.map((c, i) => (
+              <Scroll3DWrapper key={c.title} intensity={0.5} direction={i % 2 === 0 ? "left" : "right"}>
+                <CauseCard c={c} i={i} />
+              </Scroll3DWrapper>
+            ))}
           </div>
         </div>
       </section>
@@ -174,18 +179,20 @@ export default function Home({ onNav }) {
           <h2 className="section-title">What people say</h2>
           <div className="testi-grid" ref={testiRef}>
             {TESTIMONIALS.map((t, i) => (
-              <div key={i} className="testi-card reveal-child" style={{ "--tcol": t.col, transitionDelay: `${i * 0.1}s`, transform: `rotate(${(i - 1) * 1.5}deg)` }}>
-                <div className="testi-bar" />
-                {i === 0 && <div className="tape tape-tr" />}
-                <p className="testi-quote handwritten">"{t.quote}"</p>
-                <div className="testi-who">
-                  <div className="testi-avatar" style={{ background: t.col }}>{t.name[0]}</div>
-                  <div>
-                    <span className="testi-name">{t.name}</span>
-                    <span className="testi-role">{t.role}</span>
+              <Scroll3DWrapper key={i} intensity={0.7} direction="up">
+                <div className="testi-card reveal-child" style={{ "--tcol": t.col, transitionDelay: `${i * 0.1}s`, transform: `rotate(${(i - 1) * 1.5}deg)` }}>
+                  <div className="testi-bar" />
+                  {i === 0 && <div className="tape tape-tr" />}
+                  <p className="testi-quote handwritten">"{t.quote}"</p>
+                  <div className="testi-who">
+                    <div className="testi-avatar" style={{ background: t.col }}>{t.name[0]}</div>
+                    <div>
+                      <span className="testi-name">{t.name}</span>
+                      <span className="testi-role">{t.role}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Scroll3DWrapper>
             ))}
           </div>
         </div>
