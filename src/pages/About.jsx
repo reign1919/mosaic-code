@@ -3,6 +3,7 @@ import { Users, Zap, Award, BookOpen, ArrowRight } from "lucide-react";
 import MosaicCanvas from "../components/MosaicCanvas";
 import { useScrollReveal, useStaggerReveal } from "../hooks/useScrollReveal";
 import Scroll3DWrapper from "../components/Scroll3DWrapper";
+import CenterRevealWrapper from "../components/CenterRevealWrapper";
 import "./PageShared.css";
 import "./About.css";
 
@@ -135,14 +136,16 @@ export default function About({ onNav }) {
               See Our Work <ArrowRight size={15}/>
             </button>
           </div>
-          <div className="about-visual">
-            <div className="canvas-float">
-              <MosaicCanvas size={380} />
-              <p className="handwritten" style={{ fontSize: 13, color: "var(--accent)", textAlign: "center", marginTop: 12 }}>
-                ↑ Every tile a different story. One foundation.
-              </p>
+          <CenterRevealWrapper>
+            <div className="about-visual">
+              <div className="canvas-float">
+                <MosaicCanvas size={380} />
+                <p className="handwritten" style={{ fontSize: 13, color: "var(--accent)", textAlign: "center", marginTop: 12 }}>
+                  ↑ Every tile a different story. One foundation.
+                </p>
+              </div>
             </div>
-          </div>
+          </CenterRevealWrapper>
         </div>
       </section>
 

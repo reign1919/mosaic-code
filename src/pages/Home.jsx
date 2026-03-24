@@ -3,6 +3,7 @@ import { ArrowRight, Sparkles, Users, Globe, Heart } from "lucide-react";
 import MosaicCanvas from "../components/MosaicCanvas";
 import { useScrollReveal, useStaggerReveal } from "../hooks/useScrollReveal";
 import Scroll3DWrapper from "../components/Scroll3DWrapper";
+import CenterRevealWrapper from "../components/CenterRevealWrapper";
 import "./Home.css";
 
 const STATS = [
@@ -152,25 +153,27 @@ export default function Home({ onNav }) {
       </section>
 
       {/* ── QUOTE BANNER ── */}
-      <section className="quote-banner">
-        <div className="qb-tiles">
-          {[...Array(30)].map((_, i) => (
-            <span key={i} className="qb-tile" style={{
-              "--col": `var(--c${(i % 10) + 1})`,
-              "--d":   `${Math.random() * 3}s`,
-              "--dur": `${1.5 + Math.random() * 2}s`,
-            }} />
-          ))}
-        </div>
-        <div className="container qb-inner">
-          <div className="qb-mark handwritten">"</div>
-          <blockquote className="handwritten">
-            We are not fragments waiting to be fixed.<br />
-            We are tiles waiting to find our place in the mosaic.
-          </blockquote>
-          <cite>— The Mosaic Foundation</cite>
-        </div>
-      </section>
+      <CenterRevealWrapper>
+        <section className="quote-banner">
+          <div className="qb-tiles">
+            {[...Array(30)].map((_, i) => (
+              <span key={i} className="qb-tile" style={{
+                "--col": `var(--c${(i % 10) + 1})`,
+                "--d":   `${Math.random() * 3}s`,
+                "--dur": `${1.5 + Math.random() * 2}s`,
+              }} />
+            ))}
+          </div>
+          <div className="container qb-inner">
+            <div className="qb-mark handwritten">"</div>
+            <blockquote className="handwritten">
+              We are not fragments waiting to be fixed.<br />
+              We are tiles waiting to find our place in the mosaic.
+            </blockquote>
+            <cite>— The Mosaic Foundation</cite>
+          </div>
+        </section>
+      </CenterRevealWrapper>
 
       {/* ── TESTIMONIALS ── */}
       <section className="section testimonials-section">
@@ -201,28 +204,30 @@ export default function Home({ onNav }) {
       {/* ── CTA ── */}
       <section className="section cta-section" ref={ctaRef}>
         <div className="container">
-          <div className="cta-inner reveal-block">
-            <div className="cta-tiles-bg">
-              {[...Array(6)].map((_,i) => (
-                <span key={i} className="cta-bg-tile" style={{ "--col": `var(--c${i+1})`, "--i": i }} />
-              ))}
-            </div>
-            <div className="cta-content">
-              <span className="tag-glow" style={{ "--accent": "#ffe14d", color: "rgba(255,255,255,0.9)", borderColor: "rgba(255,225,77,0.5)", background: "rgba(255,225,77,0.12)" }}>
-                Be Part of the Picture
-              </span>
-              <h2>Ready to add your<br />piece to the mosaic?</h2>
-              <p className="handwritten">Whether you want to volunteer, donate, partner, or just learn more — there's a tile here with your name on it.</p>
-              <div className="cta-btns">
-                <button className="btn cta-btn-primary" onClick={() => onNav("involved")}>
-                  Get Involved <ArrowRight size={16}/>
-                </button>
-                <button className="btn cta-btn-ghost" onClick={() => onNav("contact")}>
-                  Contact Us
-                </button>
+          <CenterRevealWrapper>
+            <div className="cta-inner reveal-block">
+              <div className="cta-tiles-bg">
+                {[...Array(6)].map((_,i) => (
+                  <span key={i} className="cta-bg-tile" style={{ "--col": `var(--c${i+1})`, "--i": i }} />
+                ))}
+              </div>
+              <div className="cta-content">
+                <span className="tag-glow" style={{ "--accent": "#ffe14d", color: "rgba(255,255,255,0.9)", borderColor: "rgba(255,225,77,0.5)", background: "rgba(255,225,77,0.12)" }}>
+                  Be Part of the Picture
+                </span>
+                <h2>Ready to add your<br />piece to the mosaic?</h2>
+                <p className="handwritten">Whether you want to volunteer, donate, partner, or just learn more — there's a tile here with your name on it.</p>
+                <div className="cta-btns">
+                  <button className="btn cta-btn-primary" onClick={() => onNav("involved")}>
+                    Get Involved <ArrowRight size={16}/>
+                  </button>
+                  <button className="btn cta-btn-ghost" onClick={() => onNav("contact")}>
+                    Contact Us
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
+          </CenterRevealWrapper>
         </div>
       </section>
 
