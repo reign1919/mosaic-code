@@ -35,7 +35,7 @@
   position: relative;
 }
 .footer-brand h3 { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 22px; margin: 14px 0 10px; text-transform: uppercase; }
-.footer-brand p  { font-family: 'Kalam', cursive; color: var(--text2); font-size: 15px; line-height: 1.7; max-width: 270px; margin-bottom: 22px; font-weight: 700; }
+.footer-brand p  { font-family: 'Shadows Into Light Two', cursive; color: var(--text2); font-size: 15px; line-height: 1.7; max-width: 270px; margin-bottom: 22px; font-weight: 700; }
 
 /* Footer logo tiles 3×3 */
 .footer-logo-tiles { display:grid; grid-template-columns:repeat(3,1fr); gap:3px; width:46px; }

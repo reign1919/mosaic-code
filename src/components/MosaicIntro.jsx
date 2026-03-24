@@ -120,7 +120,7 @@ export default function MosaicIntro({ onDone }) {
           ctx.fillText("THE MOSAIC", W / 2, H / 2 - 20);
 
           // Subtitle in handwriting
-          ctx.font = `${Math.min(20, W * 0.028)}px 'Kalam', cursive`;
+          ctx.font = `${Math.min(20, W * 0.028)}px 'Shadows Into Light Two', cursive`;
           ctx.fillStyle = "rgba(184,255,0,0.9)";
           ctx.fillText("FOUNDATION ✦ BUILT BY YOUTH", W / 2, H / 2 + 36);
           ctx.restore();
@@ -151,7 +151,7 @@ export default function MosaicIntro({ onDone }) {
         ctx.fillText("THE MOSAIC", W / 2 + 4, H / 2 - 20 + 4);
         ctx.fillStyle = "#ffffff";
         ctx.fillText("THE MOSAIC", W / 2, H / 2 - 20);
-        ctx.font = `${Math.min(20, W * 0.028)}px 'Kalam', cursive`;
+        ctx.font = `${Math.min(20, W * 0.028)}px 'Shadows Into Light Two', cursive`;
         ctx.fillStyle = "rgba(184,255,0,0.9)";
         ctx.fillText("FOUNDATION ✦ BUILT BY YOUTH", W / 2, H / 2 + 36);
         ctx.restore();

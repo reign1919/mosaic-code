@@ -47,7 +47,7 @@
   text-transform: uppercase;
 }
 .hero-title em {
-  font-family: 'Kalam', cursive;
+  font-family: 'Shadows Into Light Two', cursive;
   font-style: normal;
   font-weight: 700;
   color: var(--accent);
@@ -143,7 +143,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text3);
-  font-family: 'Kalam', cursive;
+  font-family: 'Shadows Into Light Two', cursive;
   font-weight: 700;
 }
 
@@ -195,7 +195,7 @@
   text-transform: uppercase;
 }
 .cause-card p {
-  font-family: 'Kalam', cursive;
+  font-family: 'Shadows Into Light Two', cursive;
   font-size: 14px;
   color: var(--text2);
   line-height: 1.65;
@@ -232,7 +232,7 @@
 }
 .quote-banner cite {
   color: var(--c3);
-  font-family: 'Kalam', cursive;
+  font-family: 'Shadows Into Light Two', cursive;
   font-size: 14px;
   font-weight: 700;
 }
@@ -279,7 +279,7 @@
   display:block;
   font-size:11px;
   color:var(--text3);
-  font-family: 'Kalam', cursive;
+  font-family: 'Shadows Into Light Two', cursive;
   font-weight: 700;
 }
 

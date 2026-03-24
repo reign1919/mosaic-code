@@ -48,7 +48,7 @@
 .logo-tile:nth-child(4) { background: var(--c4); }
 @keyframes logoWobble { 0%,100%{transform:rotate(0deg) scale(1)} 25%{transform:rotate(8deg) scale(1.1)} 75%{transform:rotate(-5deg) scale(0.95)} }
 .logo-name { display:block; font-family:'Outfit',sans-serif; font-weight:800; font-size:18px; color:var(--text); line-height:1; }
-.logo-sub  { display:block; font-family:'Kalam',cursive; font-size:10px; color:var(--accent); line-height:1.5; font-weight:700; }
+.logo-sub  { display:block; font-family:'Shadows Into Light Two', cursive; font-size:10px; color:var(--accent); line-height:1.5; font-weight:700; }
 
 /* Desktop links — sticker tabs */
 .nav-links { list-style:none; display:flex; align-items:center; gap:4px; margin-left:auto; }
